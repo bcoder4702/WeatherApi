@@ -17,7 +17,7 @@ searchbutton.addEventListener('click', ()=>{
 let weather ={
     fetchweather: function (searchtext){
         fetch(
-            "http://api.openweathermap.org/data/2.5/weather?q="+ searchtext + "&appid=c9cdb96aac998cf1a6ea385e7d374c0e"
+            "https://api.openweathermap.org/data/2.5/weather?q="+ searchtext + "&appid=c9cdb96aac998cf1a6ea385e7d374c0e"
         ).then((response) => response.json()) 
         .then((data) => this.displayWeather(data));
     },
