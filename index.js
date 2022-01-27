@@ -45,3 +45,11 @@ let weather ={
 function clea(){
     document.getElementById("search-input").value='';
 }
+document.getElementById("search-input").addEventListener('keyup',calling);
+function calling(event){
+    if(event.key=="Enter"){
+        let searchInput=document.getElementById("search-input").value;
+        clea();
+        weather.fetchweather(searchInput);
+    }
+}
